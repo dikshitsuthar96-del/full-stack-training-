@@ -1,0 +1,296 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: rgb(223, 240, 240);
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .navbar {
+      height: 80px;
+      background: #fff;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar img {
+      height: 80px;
+      width: 200px;
+      cursor: pointer;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: gray;
+      padding: 8px 12px;
+      width: 500px;
+      margin: 30px ;
+      box-shadow: 0 1px 3px navajowhite;
+    }
+    .search-container svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .user-icon{
+      color: gray;
+      cursor: pointer;
+    }
+    .search-container input {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+      font-size: 16px;
+      display: block;
+      border-bottom: 1px solid #515151;
+
+    }
+
+label {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+}
+
+input:focus~label {
+    top: -20px;
+    font-size: 14px;
+    color : #7700ff;
+}
+input:focus {
+    border-width: 1px;
+    border-bottom-color: #a769ed;
+}
+
+    .main-content .add-first {
+    color: black;
+    font-size: 0.90rem;
+    font-weight: bold;
+    margin-left: none;
+    cursor: pointer;
+}
+.main-content .add-second {
+    font-size: 0.65rem;
+    font-weight: normal;
+    color: grey;
+    cursor: pointer;
+}
+
+.tag-list {
+    width: 30rem;
+    font-family: "Montserrat";
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.inner{
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+    animation: loop 3s linear infinite;
+}
+.tag{
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    background-color: #334155;
+    padding: 0.7rem 0.6rem;
+    border-radius: 0.4rem;
+}  
+
+    .movie-container {
+      display: grid;
+      grid-template-columns:0.5fr 0.5fr 0.5fr 0.5fr;
+      grid-template-rows: 0.5fr;
+      margin-top: 20px;
+    }
+
+    .movie-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 410px;
+      width: 230px;
+      cursor: pointer;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.1);
+      transition: all ease-in 0.3s;
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 330px;
+      display: block;
+    }
+
+    .movie-info {
+      padding: 12px;
+    }
+
+    .movie-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 8px;
+    }
+
+    .movie-meta {
+      font-size: 14px;
+      color: #666;
+    }
+    .Artists {
+      margin-top: 50px;
+      margin-bottom: 70px;
+      margin-left: 210px;
+      overflow: scroll;
+      max-width: 1250px;
+      display: grid;
+      grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+    .card img {
+      width: 250px;
+      height: 250px;
+      border-radius: 70%;
+      overflow: hidden;
+      cursor: pointer;
+      margin-left: 50px;
+    }
+    .card img:hover{
+      transform: scale(1.1);
+      transition: all ease-in 0.3s;
+    }
+    .Artists-info {
+      margin-top: 10px;
+      margin-left: 130px;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+    .card2 img {
+      width: 250px;
+      height: 250px;
+      border-radius: 70%;
+      overflow: hidden;
+      cursor: pointer;
+      margin-left: 50px;
+    }
+    .card2 img:hover{
+      transform: scale(1.1);
+      transition: all ease-in 0.3s;
+    }
+    .Artists2-info {
+      margin-top: 10px;
+      margin-left: 100px;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+     .card3 img {
+      width: 250px;
+      height: 250px;
+      margin-left: 50px;
+      border-radius: 70%;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .card3 img:hover{
+      transform: scale(1.1);
+      transition: all ease-in 0.3s;
+    }
+    .Artists3-info {
+      margin-top: 10px;
+      margin-left: 150px;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+     .card4 img {
+      width: 250px;
+      height: 250px;
+      border-radius: 70%;
+      overflow: hidden;
+      cursor: pointer;
+      margin-left: 50px;
+    }
+    .card4 img:hover{
+      transform: scale(1.1);
+      transition: all ease-in 0.3s;
+    }
+    .Artists4-info {
+      margin-top: 10px;
+      margin-left: 120px;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+    
+    footer {
+        background-color: #1e1e20;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding : 90px
+        }
+        #logo {
+        width: 100px;
+    }
+
+    a {
+        text-decoration: none;
+        color : white;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    #second {
+        display: flex;
+        gap : 10px
+    }
+    
+    #third{
+        color: white;
+        font-weight: bold;
+    }
+    .last-part{
+        display: flex;
+        align-items: center;
+        background-color: #1e1e20;
+        color: gray;
+        height: 120px;
+        border-top: 1px solid white;
+       justify-content: space-evenly;
+       text-align: center;
+    }
+    .last-part svg {
+        cursor: pointer;
+    }
+    .last-part svg:hover{
+        background: #000;
+        overflow: hidden;
+        transition: transform ease-in 0.3s;
+        height: 30px;
+        width: 30px
+    }

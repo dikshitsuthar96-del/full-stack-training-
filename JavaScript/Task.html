@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover Dropdown</title>
+  <style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 4px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 160px;
+      border: 1px solid #ccc;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+     /* Modal Background */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 400px;
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    /* Close Button */
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333;
+      --card-bg: #f5f5f5;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f1f1f1;
+      --card-bg: #1e1e1e;
+      --card-shadow: rgba(255, 255, 255, 0.05);
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: var(--card-bg);
+      box-shadow: 0 4px 10px var(--card-shadow);
+      border-radius: 10px;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    .card p {
+      line-height: 1.6;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="dropdown" id="dropdown">
+    Hover Me
+    <div class="dropdown-content" id="dropdown-content">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+  </div>
+   <!-- Trigger Button -->
+  <button id="openModalBtn">Open Modal</button>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <h2>Modal Title</h2>
+      <p>This is a simple modal using JavaScript.</p>
+    </div>
+  </div>
+
+   <button class="toggle-btn" id="toggleTheme">Toggle Theme</button>
+
+  <div class="card">
+    <h2>Card Title</h2>
+    <p>This is a simple card with a toggleable light/dark theme. Click the button to switch modes.</p>
+  </div>
+  <script src="Task.js"></script>
+  
+</body>
+</html>

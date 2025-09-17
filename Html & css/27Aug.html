@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin : 0 ;
+        padding : 0 ;
+        box-sizing: border-box;
+        font-family: "Geist", sans-serif;;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+ .container {
+    height: 350px;
+   
+    width: 400px;
+    border : 1px solid oklch(0.877 0 0) ;
+    border-radius: 20px;
+    padding : 26px;
+    display: flex;
+    flex-direction: column;
+    gap : 10px;
+ }
+    .heading {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .desc {
+        font-size: 14px;
+        color : oklch(0.556 0 0)
+    }
+    .profile {
+        display: flex;
+        gap : 10px ;
+        align-items: center;
+    }
+
+    .pic {
+        width : 60px
+    }
+
+    .first_group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap : 10px
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="group_text">
+           <h4 class="heading">Team Members</h4>
+          <p class="desc">Invite your team members to collaborate.</p> 
+        </div>
+        <div class="group_users">
+            <div class="first_group">
+                <div class="profile">
+                    <div class="avatar">
+                        <img class="pic" src="https://ui.shadcn.com/avatars/01.png">
+                    </div>
+                    <div class="intro">
+                        <p class="name">Dikshit Suthar</p>
+                        <p class="mail">dikshit@gmail.com</p>
+                    </div>
+                </div>
+                <div class="tag">Owner</div>
+            </div>
+            <div class="first_group">
+                <div class="profile">
+                    <div class="avatar">
+                        <img class="pic" src="https://ui.shadcn.com/avatars/01.png">
+                    </div>
+                    <div class="intro">
+                        <p class="name">Chinmay</p>
+                        <p class="mail">chinmay420@gmail.com</p>
+                    </div>
+                </div>
+                <div class="tag">Devlopar</div>
+            </div>
+            <div class="first_group">
+                <div class="profile">
+                    <div class="avatar">
+                        <img class="pic" src="https://ui.shadcn.com/avatars/01.png">
+                    </div>
+                    <div class="intro">
+                        <p class="name">Aryan</p>
+                        <p class="mail">aryan23s@gmail.com</p>
+                    </div>
+                </div>
+                <div class="tag">Owner</div>
+            </div>
+            <div class="first_group">
+                <div class="profile">
+                    <div class="avatar">
+                        <img class="pic" src="https://ui.shadcn.com/avatars/01.png">
+                    </div>
+                    <div class="intro">
+                        <p class="name"></p>
+                        <p class="mail">m@example.com</p>  
+                    </div>
+                </div>
+                <div class="tag">Owner</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
