@@ -146,35 +146,221 @@
 // }
 // export default App
 
-import { useState } from "react";
+// import { useState } from "react";
 
-function App(){
-  const [email ,setEmail] = useState('');
-  const [password, setPassword] = useState('');
+// function App(){
+//   const [email ,setEmail] = useState('');
+//   const [password, setPassword] = useState('');
 
-  const handleEmailChange = (event) =>{
-console.log(event.target.value)
-setEmail(event.target.value)
-  }
+//   const handleEmailChange = (event) =>{
+// console.log(event.target.value)
+// setEmail(event.target.value)
+//   }
 
-  const handlePasswordChange = (event) => {
-console.log(event.target.value)
-setPassword(event.target.value)    
-  }
+//   const handlePasswordChange = (event) => {
+// console.log(event.target.value)
+// setPassword(event.target.value)    
+//   }
+//   return (
+//     <div>
+//       <h1>FORM HANDLING</h1>
+//       <h1>GETTING VALUES OUT OF THE FORM INPUT FIELDS AND SUBMIT THE VALUES AS AN OBJECT</h1>
+//       <form>
+//         <label>Email</label>
+//         <input onChange={handleEmailChange} type="email" name="email"  />
+//         <label>Password</label>
+//         <input onChange={handlePasswordChange} type="password" name="password" />
+//         <button>Submit</button>
+//       </form>                               
+//       <p>Email : {email}</p>
+//       <p>Password : {password}</p>
+//     </div>
+//   )
+// }
+// export default App;
+
+
+//rfcs  , rfce
+
+// import React from 'react'
+
+// function App() {
+//   const NumberList = [1,2,3,4,5,6];
+//   return (
+//     <div>
+//     {NumberList.map((num)=>(
+//       <div key={num}>
+//         <h1>{num}</h1>
+//       </div>
+//     ))}
+//     </div>
+//   )
+// }
+// export default App
+
+//list of 10 product array of object :
+//show all this product on ui
+
+
+// import {useState} from 'react'
+
+// function App() {
+//   const [list,stelist] = useState(['Mobile','Ac','Tv'])
+//   const [Input,setInput] = useState('');
+//   console.log()
+
+
+
+//   const handleSubmit = (e) =>{
+//     e.preventDefault();
+//     setList([...list, input]);
+//   };
+//   return (
+//     <div>
+//       <form onSubmit={handleSubmit}>
+//         <input type='text'/>
+//         <button>Add Product</button>
+//       </form>
+//       {list.map((product))}
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// function App(){
+//   const [isError , setIsError] = useState(false)
+//   const [data , setData] = useState([1,2])
+//   const handIsError =()=>{
+//     setIsError(!isError)
+//   }
+//   return(
+//     <div>
+//       {isError ? <h1 >Error</h1>: <h1>No Error Found</h1>}
+//       <button onClick={handIsError}>
+//         {isError ? "Remove error" : "Show error"}
+//       </button>
+
+//       {isError && (
+//         <h1>this is showing using logical shortcircuiting operator</h1>
+//       )}
+//       {!isError && <h1>There is no error to show</h1>}
+
+//       {data.length === 0 ? (
+//         <h1>
+//           You have no data <button>Refresh</button>
+//         </h1>
+//       ):(
+//         <h1>{data.length}</h1>
+//       )}
+//     </div>
+//   );
+// }
+
+// import React from 'react';
+// import { useEffect , useState} from 'react';
+// import { Routes } from 'react-router-dom';
+
+// function App(){
+//   const [products,setProduct] = useState([])
+//   const [selectedId , setSelectedId] = useState(null);
+//   useEffect(() => {
+//     fetch('https://fakestoreapi.com/products')
+//       .then((res) => res.json())
+//       .then((data) => {
+//         setProduct(data)
+//       });
+//   }, []);
+//   const handleSelectChange = (e) => {
+//     setSelectedId(e.target.value)
+//   }}
+//   useEffect(()=>{
+//      fetch(`https://fakestoreapi.com/products/${selectedId}`)
+//     .then((res) => res.json())
+//     .then((data) => {
+//      console.log(data)
+//     });
+//   },[selectedId])
+  
+//   return 
+//     <div>
+//     <select onChange={handleSelectChange} >
+//       {products.map((product)=>(
+//         <option value={product.id}>{product.title}</option>
+//       ))}
+//     </select>
+//     <h1>{selectedId}</h1>
+//   </div>;
+ 
+// export default App
+
+// function App(){
+//   <div>
+//     <Routes>
+//       <Route path="/" element={<Homepage />}/>
+//       {/* <Route path="/about-us" element={}/> */}
+//     </Routes>
+//   </div>
+// }
+
+// import Homepage from './pages/Homepage';
+// import { Routes, Route } from 'react-router-dom';
+// import Aboutuspage from './pages/Aboutuspage';
+// import Servicepage from './pages/Servicepage';
+// import Navbar from './components/Navbar';
+// import Login from './pages/Login';
+// function App() {
+//   return (
+//     <div>
+//       <Navbar />
+//       <Routes>
+//         <Route path="/" element={<Homepage />} />
+//         <Route path="/about-us" element={<Aboutuspage />} />
+//         <Route path="/services" element={<Servicepage />} />
+//         <Route path='/login' element={<Login/>}/>
+//       </Routes>
+//     </div>
+//   );
+// }
+
+// export default App;
+import React from 'react';
+
+import Homepage from './page/Homepage';
+import { Routes, Route } from 'react-router-dom';
+import Aboutuspage from './page/Aboutuspage';
+import Servicepage from './page/Servicepage';
+import Navbar from './component/Navbar';
+import Login from './page/Login';
+import Productpage from './page/Productpage';
+import ProductDetails from './page/ProductDetails';
+import Dashboardpage from './page/Dashboardpage';
+import Overviewpage from './page/Overviewpage';
+import Customerspage from './page/Customerspage';
+function App() {
   return (
     <div>
-      <h1>FORM HANDLING</h1>
-      <h1>GETTING VALUES OUT OF THE FORM INPUT FIELDS AND SUBMIT THE VALUES AS AN OBJECT</h1>
-      <form>
-        <label>Email</label>
-        <input onChange={handleEmailChange} type="email" name="email"  />
-        <label>Password</label>
-        <input onChange={handlePasswordChange} type="password" name="password" />
-        <button>Submit</button>
-      </form>
-      <p>Email : {email}</p>
-      <p>Password : {password}</p>
+      {/* <Navbar /> */}
+      <Routes>
+        {/* this is a open route */}
+      <Route path="/login" element={<Login />} />
+
+{/* this all going to  be protected routes */}
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about-us" element={<Aboutuspage />} />
+        <Route path="/services" element={<Servicepage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/products" element={<Productpage />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
+        <Route path="/dashboard" element={<Dashboardpage />}>
+          <Route index element={<Overviewpage />} />
+          <Route path="overview" element={<Overviewpage />} />
+          <Route path="customers" element={<Customerspage />} />
+        </Route>
+      </Routes>
     </div>
-  )
+  );
 }
+
 export default App;
